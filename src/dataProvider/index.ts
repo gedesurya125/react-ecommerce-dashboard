@@ -26,6 +26,7 @@ export default (type: string) => {
 };
 
 const getDataProvider = async (type: string): Promise<DataProvider> => {
+  // eslint-disable-next-line no-undef
   await fakeServerFactory(process.env.REACT_APP_DATA_PROVIDER || "");
   /**
    * This demo can work with either a fake REST server, or a fake GraphQL server.
