@@ -40,7 +40,7 @@ export const ProductStockChart = () => {
   //   return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
   // };
 
-  const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
+  const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "blue"];
 
   return (
     <Card>
@@ -53,7 +53,7 @@ export const ProductStockChart = () => {
               <YAxis />
               <CartesianGrid strokeDasharray="1 1" />
               <Tooltip />
-              <Legend />
+              {/* <Legend /> */}
               <Bar
                 dataKey="stock"
                 fill={"#8A6642"}
@@ -62,10 +62,16 @@ export const ProductStockChart = () => {
                 label={{
                   position: "top",
                 }}
-              />
-              {dataForChart.map(({ label }, index) => (
-                <Cell key={`cell-${label}`} fill={colors[index % 20]} />
-              ))}
+              >
+                {/* {dataForChart.map(({ label }, index) => {
+                  return (
+                    <Cell
+                      key={`cell-${label}`}
+                      fill={colors[index % colors?.length]}
+                    />
+                  );
+                })} */}
+              </Bar>
             </BarChart>
           </ResponsiveContainer>
         </div>
