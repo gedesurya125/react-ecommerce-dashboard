@@ -50,7 +50,12 @@ export const App = () => {
         icon={ProductIcon}
       />
       <Resource name="categories" list={CategoryList} icon={Categories} />
-      <Resource name="customers" list={CustomerList} icon={People} />
+      <Resource
+        name="customers"
+        list={CustomerList}
+        icon={People}
+        recordRepresentation="first_name"
+      />
       <Resource name="invoices" list={InvoiceList} icon={Paper} />
       <Resource name="reviews" list={ReviewList} icon={Review} />
 
