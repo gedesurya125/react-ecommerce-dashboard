@@ -10,14 +10,14 @@ import {
 export const ReviewList = () => (
   <List>
     <Datagrid rowClick="edit">
-      <TextField source="id" />
+      <ReferenceField source="customer_id" reference="customers" />
+      {/* <TextField source="id" /> */}
       <DateField source="date" />
       <TextField source="status" />
       <ReferenceField source="command_id" reference="commands" />
       <ReferenceField source="product_id" reference="products" />
-      <ReferenceField source="customer_id" reference="customers" />
       <NumberField source="rating" />
-      <TextField source="comment" />
+      {/* <TextField source="comment" /> */}
     </Datagrid>
   </List>
 );
