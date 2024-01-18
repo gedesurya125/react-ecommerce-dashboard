@@ -1,8 +1,9 @@
 import {
   Admin,
-  ListGuesser,
+  // EditGuesser,
+  // ListGuesser,
   Resource,
-  ShowGuesser,
+  // ShowGuesser,
   // ListGuesser, //? used to generate List Component
   // EditGuesser, //? used to generate Edit Form Component
   // ShowGuesser, //? used to generated Show Detail Component
@@ -12,7 +13,7 @@ import { authProvider } from "./authProvider";
 import dataProviderFactory from "./dataProvider";
 import { LogData } from "./components/LogData";
 import { CommandList, CommandShow } from "./commands/Commands";
-import { ProductList } from "./products/Products";
+import { ProductEdit, ProductList, ProductShow } from "./products/Products";
 import { CategoryList } from "./categories/Categories";
 import { CustomerList } from "./customers/Customers";
 import { InvoiceList } from "./invoices/Invoices";
@@ -51,6 +52,8 @@ export const App = () => {
         list={ProductList}
         recordRepresentation="reference"
         icon={ProductIcon}
+        show={ProductShow}
+        edit={ProductEdit}
       />
       <Resource
         name="categories"
